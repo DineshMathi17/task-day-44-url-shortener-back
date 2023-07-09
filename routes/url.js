@@ -1,7 +1,6 @@
 const express = require("express");
 const shortid = require("shortid");
 const URL = require("../schemas/urlSchema");
-const {validation}=require('../common/auth')
 const router = express.Router();
 
 
@@ -36,5 +35,7 @@ router.post("/", async (req, res)=>{
 
   
 module.exports = router;
+
+
 
 
