@@ -21,7 +21,7 @@ router.post("/", async (req, res)=>{
   const body = req.body;
   if (!body.url) return res.status(400).json({ error: "url is required" });
   const shortID = shortid();
-  let link =`http://localhost:3000/url/${shortID}`
+  let link =`https://url-shortener-17.netlify.app/url/${shortID}`
 
   const data = await URL.create({
     shortId: shortID,
