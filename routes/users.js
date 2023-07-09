@@ -2,8 +2,8 @@ var express = require('express');
 const router = express.Router();
 const { User, validate } = require('../schemas/userSchema')
 const mongoose = require('mongoose')
-const { dbUrl } = require('../common/dbConfig')
-const { hashPasswords, hashCompare, createToken, validation } = require('../common/auth')
+const { dbUrl } = require('../common/dbconfig')
+const { hashPasswords, hashCompare, createToken } = require('../common/auth')
 const crypto = require("crypto");
 mongoose.connect(dbUrl)
 const bcrypt = require('bcryptjs')
